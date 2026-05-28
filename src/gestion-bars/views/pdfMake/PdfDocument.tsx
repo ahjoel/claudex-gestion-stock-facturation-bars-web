@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import pdfMake from 'pdfmake/build/pdfmake'
 import pdfFonts from 'pdfmake/build/vfs_fonts'
 
-pdfMake.vfs = pdfFonts.pdfMake.vfs
+pdfMake.vfs = (pdfFonts as any).pdfMake.vfs
 
 interface PdfDocumentProps {
   data: Array<{ col1: string; col2: string; col3: string; col4: string }>
