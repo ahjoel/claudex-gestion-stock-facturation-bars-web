@@ -1,3 +1,6 @@
+// ** React Imports
+import { ReactNode } from 'react'
+
 // ** Types
 import { RepeaterProps } from './types'
 
@@ -9,7 +12,7 @@ const Repeater = (props: RepeaterProps) => {
   const Tag = tag || 'div'
 
   // ** Default Items
-  const items = []
+  const items: ReactNode[] = []
 
   // ** Loop passed count times and push it in items Array
   for (let i = 0; i < count; i++) {
